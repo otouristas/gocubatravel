@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# gocuba.travel
 
-## Getting Started
+Next.js App Router site migrated from [skydream.gr](https://www.skydream.gr). Same slugs, Greek source copy plus English, GO CUBA brand.
 
-First, run the development server:
+- **Header / footer** match the live Skydream menus, legal links, phone, email, Skype, socials, certifications, ΜΗΤΕ number, cookie notice, and sister-brand line.
+- **Hotel template** — intro, facilities, rooms, restaurants, address, gallery, enquiry.
+- **`/tours`** — cubatours-style product pages (`/el/tours/[slug]`), original WP slugs still resolve.
+- **Hidden / draft (yellow)** URLs keep the same slug and send `noindex`.
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` (redirects to `/el`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Netlify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site builds with zero configuration on Netlify: `netlify.toml` sets the build command, the
+publish directory, and Node 22. Netlify installs and updates the Next.js runtime itself, so no
+adapter is pinned in `package.json`.
 
-## Learn More
+1. In Netlify, choose **Add new project → Import an existing project** and pick
+   [otouristas/gocubatravel](https://github.com/otouristas/gocubatravel).
+2. Keep the detected settings (`npm run build`, publish `.next`) and deploy.
+3. Point the `gocuba.travel` domain at the project under **Domain management**.
 
-To learn more about Next.js, take a look at the following resources:
+No environment variables are required — all content ships in `src/content/records.ts`, and remote
+images are served from `skydream.gr` (allow-listed in `next.config.ts`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy from the command line instead:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx netlify-cli deploy --build --prod
+```
