@@ -28,7 +28,8 @@ adapter is pinned in `package.json`.
 3. Point the `gocuba.travel` domain at the project under **Domain management**.
 
 No environment variables are required — all content ships in `src/content/records.ts`, and remote
-images are served from `skydream.gr` (allow-listed in `next.config.ts`).
+images are served from `skydream.gr` (allow-listed in `next.config.ts`). That dependency on the
+old domain, and how to end it, is documented in [`docs/image-hosting.md`](docs/image-hosting.md).
 
 To deploy from the command line instead:
 
