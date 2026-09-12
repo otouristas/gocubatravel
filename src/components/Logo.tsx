@@ -38,10 +38,10 @@ export default function Logo({
         }`}
       >
         <Image
-          src="/logo.jpg"
+          src="/gocuba-specialist-logo.svg"
           alt="GO CUBA — Easy Travel Planning"
-          width={360}
-          height={131}
+          width={650}
+          height={244}
           priority
           className={`w-auto object-contain transition-all duration-200 ${heightClasses[size]}`}
         />
