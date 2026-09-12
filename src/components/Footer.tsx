@@ -34,19 +34,23 @@ export default function Footer({ locale }: { locale: Locale }) {
             </div>
             <div>
               <p className="font-editorial text-lg text-white">
-                {isEn ? "Design Your Bespoke Cuba Experience" : "Σχεδιάστε το Δικό σας Ταξίδι στην Κούβα"}
+                {isEn
+                  ? "Questions about your trip to Cuba?"
+                  : "Έχεις απορίες για το ταξίδι σου στην Κούβα;"}
               </p>
               <p className="text-sm text-white/60">
                 {isEn
-                  ? "Talk directly to our destination specialists in Athens & Havana."
-                  : "Μιλήστε απευθείας με τους εξειδικευμένους συμβούλους μας σε Αθήνα & Αβάνα."}
+                  ? "Get in touch for details about our services, or to find the right way to start."
+                  : "Επικοινώνησε μαζί μας για πληροφορίες σχετικά με τις υπηρεσίες μας ή για να βρεις τον κατάλληλο τρόπο να ξεκινήσεις."}
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
+            {/* Plain tel: link — opens the device dialer, never Skype. */}
             <a
               href={SITE.phoneHref}
+              aria-label={`${isEn ? "Call us at" : "Καλέστε μας στο"} ${SITE.phoneDisplay}`}
               className="btn-gold !py-2.5 !px-5 !text-sm font-semibold tracking-wider"
             >
               <Phone className="h-4 w-4" />
@@ -242,23 +246,25 @@ export default function Footer({ locale }: { locale: Locale }) {
         </div>
 
         {/* 4. Sister Brands Studio Credit */}
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-white/60">
-          <p className="text-white/40 mb-1.5">{t(COPY.sisterIntro, locale)}</p>
-          <p className="flex flex-wrap items-center justify-center gap-3">
-            {SISTER_BRANDS.map((b, i) => (
-              <span key={b.href} className="inline-flex items-center gap-3">
-                {i > 0 && <span className="text-white/20">•</span>}
+        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-white/60">
+          <p className="mb-4 text-center text-white/40">{t(COPY.sisterIntro, locale)}</p>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {SISTER_BRANDS.map((b) => (
+              <li key={b.href} className="border-l-2 border-gold/30 pl-3">
                 <a
                   href={b.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium text-white/80 hover:text-gold transition-colors"
+                  className="font-semibold text-white/90 transition-colors hover:text-gold"
                 >
-                  {locale === "en" ? b.en : b.el}
+                  {b.name}
                 </a>
-              </span>
+                <p className="mt-0.5 text-sm leading-relaxed text-white/55">
+                  {locale === "en" ? b.en : b.el}
+                </p>
+              </li>
             ))}
-          </p>
+          </ul>
         </div>
       </div>
 

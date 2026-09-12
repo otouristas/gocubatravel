@@ -97,8 +97,30 @@ export const FOOTER_LEGAL: NavItem[] = [
 ];
 
 export const SISTER_BRANDS = [
-  { href: "https://www.skydream.travel/", el: "Skydream Travel Design Studio", en: "Skydream Travel Design Studio" },
-  { href: "https://www.myhoneymoon.gr/", el: "Γαμήλιο ταξίδι — myHoneymoon", en: "Honeymoon — myHoneymoon" },
+  {
+    href: "https://www.skydream.travel/",
+    name: "Skydream Travel Design",
+    el: "Tailor-made & ατομικά ταξίδια",
+    en: "Tailor-made & private journeys",
+  },
+  {
+    href: "https://www.myhoneymoon.gr/",
+    name: "myHoneymoon",
+    el: "Γαμήλια ταξίδια",
+    en: "Honeymoon travel",
+  },
+  {
+    href: "https://www.cubavisa.travel/",
+    name: "CubaVisa.travel",
+    el: "eVisa για Κούβα",
+    en: "Cuba eVisa",
+  },
+  {
+    href: "https://www.cubatravel.academy/",
+    name: "Cuba Travel Academy",
+    el: "Πληροφορίες & εκπαίδευση για ταξίδια στην Κούβα",
+    en: "Cuba travel information & education",
+  },
 ] as const;
 
 export const COPY = {
@@ -111,17 +133,20 @@ export const COPY = {
     en: "© 2026 GO CUBA | All rights reserved",
   },
   devCredit: {
-    label: "Skydreams Lab",
-    el: "Design and Developed by",
-    en: "Design and Developed by",
+    label: "SkydreamLabs",
+    el: "Designed with Travel Expertise & Passion by",
+    en: "Designed with Travel Expertise & Passion by",
   },
   seoCredit: {
-    label: "AnotherSEOGuru.com",
+    label: "AnotherSEOGuru",
     href: "https://anotherseoguru.com",
-    el: "SEO by",
-    en: "SEO by",
+    el: "SEO Strategy & Optimization by",
+    en: "SEO Strategy & Optimization by",
   },
-  sisterIntro: { el: "Από το ίδιο στούντιο σχεδιασμού", en: "From the same design studio" },
+  sisterIntro: {
+    el: "Εξειδικευμένα travel brands της Skydream Travel:",
+    en: "Specialist travel brands by Skydream Travel:",
+  },
   cookieText: {
     el: "Χρησιμοποιούμε cookies για καλύτερη περιήγηση, ανάλυση επισκεψιμότητας, εξατομίκευση περιεχομένου και διαφημίσεις. Αν συνεχίσετε, συναινείτε στη χρήση cookies.",
     en: "We use cookies to offer you a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. If you continue to use this site, you consent to our use of cookies. Read about how we use cookies by clicking \"Cookie policy\".",

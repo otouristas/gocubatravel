@@ -16,6 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     });
+    entries.push({
+      url: `${SITE.domain}${localizedPath(locale, "/sxediasmos-taxidiou-kouva/")}`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    });
     for (const record of indexableRecords()) {
       if (record.path === "/") continue;
       entries.push({
