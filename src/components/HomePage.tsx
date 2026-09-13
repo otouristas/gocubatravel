@@ -102,11 +102,12 @@ const START_OPTIONS = [
     icon: Route,
     el: {
       intent: "Θέλω προσωπικό σχεδιασμό",
-      service: "Personal Trip Planning",
+      service: "Προσωπικός Σχεδιασμός Ταξιδιού",
       price: "€95",
-      body: "Ένας Cuba Specialist αναλαμβάνει να σχεδιάσει τη διαδρομή, τη διαμονή, τις μεταφορές και τις εκδρομές με βάση τις ανάγκες και τα ενδιαφέροντά σου.",
-      cta: "Ξεκίνα Personal Trip Planning",
-      note: "Το Planning Fee συμψηφίζεται με την τελική κράτηση μέσω GoCuba.",
+      body: "Λαμβάνεις μία εξατομικευμένη πρόταση με διαδρομή, διαμονή, μεταφορές, εκδρομές και κοστολόγηση, καθώς και μία αναθεώρηση.",
+      // .btn-gold uppercases the label, so this reads ΞΕΚΙΝΑ ΤΟΝ ΣΧΕΔΙΑΣΜΟ on the card.
+      cta: "Ξεκίνα τον σχεδιασμό",
+      note: "Αμοιβή σχεδιασμού: €95 ανά ταξίδι. Αφαιρείται πλήρως από το κόστος της κράτησης μέσω GoCuba.travel.",
     },
     en: {
       intent: "I want personal planning",
