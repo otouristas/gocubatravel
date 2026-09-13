@@ -96,6 +96,9 @@ TITLE_EN = {
 }
 
 
+OLD_EMAIL = re.compile(r"sales@skydream\.gr", re.IGNORECASE)
+
+
 def load(name: str) -> list:
     data = json.loads((CONTENT / name).read_text(encoding="utf-8"))
     return data
@@ -103,6 +106,10 @@ def load(name: str) -> list:
 
 def clean(s: str) -> str:
     s = (s or "").replace("\xa0", " ").replace("&nbsp;", " ").replace("&amp;", "&")
+    # The old customer-facing address is retired; GoCuba mail goes to hello@gocuba.travel.
+    # Rewritten here so it survives regeneration; the raw exports keep the address they
+    # were extracted with, exactly as they keep their original image URLs.
+    s = OLD_EMAIL.sub("hello@gocuba.travel", s)
     s = re.sub(r"\[inlinetweet[^\]]*\]|\[/inlinetweet\]", "", s)
     s = re.sub(r"[ \t]+", " ", s)
     s = re.sub(r"\n{3,}", "\n\n", s)

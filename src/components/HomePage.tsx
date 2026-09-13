@@ -262,7 +262,7 @@ const TRUST_PILLARS = [
   {
     icon: Award,
     el: {
-      title: "17+ Χρόνια Εξειδίκευσης στην Κούβα",
+      title: "Εξειδίκευση στην Κούβα από το 2008",
       desc: "Πραγματική γνώση του προορισμού και πολυετής εμπειρία στον σχεδιασμό ταξιδιών σε όλη την Κούβα.",
     },
     en: {
@@ -273,8 +273,8 @@ const TRUST_PILLARS = [
   {
     icon: ShieldCheck,
     el: {
-      title: "Άδεια ΕΟΤ & Διεθνείς Πιστοποιήσεις",
-      desc: "Αδειοδοτημένο ταξιδιωτικό γραφείο με διεθνείς πιστοποιήσεις και εξειδίκευση στα ταξίδια στην Κούβα.",
+      title: "Πιστοποίηση ASTA Cuba Travel Specialist",
+      desc: "Διεθνής πιστοποίηση εξειδίκευσης στον σχεδιασμό ταξιδιών στην Κούβα.",
     },
     en: {
       title: "GNTO Licence & International Accreditations",
@@ -395,7 +395,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
             <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/90 sm:text-xl">
               {isEn
                 ? "We combine route, stays, transfers and excursions around the days you have available, your interests and the way you want to travel."
-                : "Συνδυάζουμε διαδρομή, διαμονή, μεταφορές και εκδρομές με βάση τις ημέρες που έχεις διαθέσιμες, τα ενδιαφέροντά σου και τον τρόπο που θέλεις να ταξιδέψεις."}
+                : "Σχεδιάζουμε το ταξιδιωτικό σου πρόγραμμα: επιλέγουμε τη σωστή διαδρομή και συνδυάζουμε διαμονή, μεταφορές και εκδρομές με βάση τις ημέρες που έχεις διαθέσιμες, τα ενδιαφέροντά σου και τον τρόπο που θέλεις να ταξιδέψεις."}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -75,21 +75,22 @@ export default function Footer({ locale }: { locale: Locale }) {
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/70">
               {isEn
                 ? "GO CUBA is the premier destination specialist for Cuba. Bespoke itineraries, 5-star resorts, heritage casas particulares, guided tours, and official eVisa processing with 17+ years of destination expertise."
-                : "Η GO CUBA είναι το κορυφαίο εξειδικευμένο ταξιδιωτικό γραφείο για την Κούβα. Ατομικά, γαμήλια και θεματικά ταξίδια, επιλεγμένη διαμονή, εκδρομές και ηλεκτρονική βίζα με 17+ χρόνια τοπικής εμπειρίας."}
+                : "Το GoCuba.travel είναι το εξειδικευμένο brand της Skydream Travel για ταξίδια στην Κούβα. Βοηθάμε κάθε ταξιδιώτη να επιλέξει τη διαδρομή, τη διαμονή και τις εμπειρίες που του ταιριάζουν και να οργανώσει το ταξίδι του με σιγουριά."}
             </p>
 
             <div className="rounded-sm border border-white/10 bg-white/5 p-4 text-sm text-white/80">
               <div className="flex items-center gap-2 font-semibold text-gold">
                 <ShieldCheck className="h-4 w-4" />
-                <span>{isEn ? "Official Tourism License" : "Επίσημη Άδεια ΕΟΤ (ΜΗΤΕ)"}</span>
+                <span>{isEn ? "Official Tourism License" : "Νόμιμο Ταξιδιωτικό Γραφείο"}</span>
               </div>
               <p className="mt-1 font-mono text-white/90">
+                {isEn ? "" : "Αρ. ΜΗ.Τ.Ε.: "}
                 <strong>{SITE.mite}</strong>
               </p>
               <p className="mt-1 text-sm text-white/60">
                 {isEn
                   ? "Licensed Greek National Tourism Organization operator."
-                  : "Πιστοποιημένο τουριστικό γραφείο του Ελληνικού Οργανισμού Τουρισμού."}
+                  : "Καταχωρισμένο στο Μητρώο Τουριστικών Επιχειρήσεων, με έδρα την Αθήνα."}
               </p>
             </div>
           </div>

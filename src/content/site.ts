@@ -6,7 +6,7 @@ export const SITE = {
   domain: "https://gocuba.travel",
   phoneDisplay: "+30 210 32 32 522",
   phoneHref: "tel:+302103232522",
-  email: "sales@skydream.gr",
+  email: "hello@gocuba.travel",
   skype: "skydream_travel",
   mite: "0206Ε60000737600",
   offices: {
@@ -55,7 +55,7 @@ export const OFFICES: Office[] = [
 
 export const SOCIALS = [
   { id: "facebook", label: "Facebook", href: "https://www.facebook.com/Skydream.travel" },
-  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/skydream_travel/" },
+  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/skydreamtraveldesign" },
   { id: "twitter", label: "X / Twitter", href: "https://twitter.com/skydream_travel" },
   { id: "pinterest", label: "Pinterest", href: "https://www.pinterest.com/skydreamtravel/" },
   { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/skydream-travel/" },
@@ -64,7 +64,6 @@ export const SOCIALS = [
 export const CERTIFICATIONS = [
   { label: "Travel Institute", href: "https://www.thetravelinstitute.com/" },
   { label: "EOT", href: "http://www.gnto.gov.gr/" },
-  { label: ".travel", href: "https://www.skydream.travel/" },
 ] as const;
 
 export type NavItem = {
