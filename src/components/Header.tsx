@@ -346,7 +346,9 @@ export default function Header({ locale }: { locale: Locale }) {
               className="relative inline-flex items-center gap-1.5 rounded-full border border-gold bg-gradient-to-r from-gold/20 via-gold/35 to-gold/20 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-ink transition-all hover:scale-[1.03] hover:border-gold-deep hover:bg-gold hover:text-white shadow-xs"
             >
               <Sparkles className="h-3.5 w-3.5 text-gold-deep animate-pulse" />
-              <span>CUBA AI</span>
+              {/* Two words, so it wraps once the pill is squeezed: hold it on one line
+                  from 375px up, the narrowest width where the row still has the room. */}
+              <span className="min-[375px]:whitespace-nowrap">GOCUBA AI</span>
               <span className="rounded-full bg-gold-deep px-1.5 py-0.5 text-[9px] text-white font-bold">
                 VIP
               </span>
@@ -430,7 +432,7 @@ export default function Header({ locale }: { locale: Locale }) {
                     <Sparkles className="h-3.5 w-3.5" />
                   </div>
                   <span className="text-xs font-bold uppercase tracking-widest text-gold">
-                    CUBA AI
+                    GOCUBA AI
                   </span>
                 </div>
                 <span className="rounded-full bg-gold/20 px-1.5 py-0.5 text-[10px] font-bold text-gold border border-gold/40">
@@ -445,7 +447,7 @@ export default function Header({ locale }: { locale: Locale }) {
               </h3>
 
               <div className="mt-2 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gold">
-                <span>{isEn ? "Open CUBA AI" : "Ανοιξτε το CUBA AI"}</span>
+                <span>{isEn ? "Open GOCUBA AI" : "Ανοιξτε το GOCUBA AI"}</span>
                 <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
