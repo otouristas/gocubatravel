@@ -25,6 +25,15 @@ all current pages are generated from the bundled content records.
 
 Use Node.js 22.18 or newer.
 
+For a Cloudflare Git deployment, use these project settings:
+
+- Build command: `npm run build`
+- Deploy command: `npm run deploy`
+- Preview command: `npm run preview`
+
+Leave the output-directory field unset; the Cloudflare Vite plugin publishes the Worker bundle
+and assets described by `cloudflare.config.ts`, rather than the legacy `.next` directory.
+
 ```bash
 npm install
 npm run dev:workers
@@ -55,7 +64,7 @@ adapter is pinned in `package.json`.
 
 1. In Netlify, choose **Add new project → Import an existing project** and pick
    [otouristas/gocubatravel](https://github.com/otouristas/gocubatravel).
-2. Keep the detected settings (`npm run build`, publish `.next`) and deploy.
+2. Keep the detected settings (`npm run build:next`, publish `.next`) and deploy.
 3. Point the `gocuba.travel` domain at the project under **Domain management**.
 
 No environment variables are required — all content ships in `src/content/records.ts`, and remote

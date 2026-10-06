@@ -7,12 +7,15 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cf build",
+    "build:next": "next build",
     "start": "next start",
     "lint": "eslint",
     "dev:workers": "vite dev",
     "build:workers": "cf build",
-    "deploy:workers": "cf deploy"
+    "deploy": "cf deploy",
+    "deploy:workers": "cf deploy",
+    "preview": "vite dev"
   },
   "dependencies": {
     "lucide-react": "^1.33.0",
