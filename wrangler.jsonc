@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "gocuba-travel",
+  "name": "gocubatravel",
   "main": ".cloudflare/output/v0/workers/default/bundle/index.js",
   "compatibility_date": "2026-10-06",
   "compatibility_flags": ["nodejs_compat"],

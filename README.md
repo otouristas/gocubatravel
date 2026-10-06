@@ -52,7 +52,7 @@ After authenticating with Cloudflare (`cf auth login`), deploy with:
 npm run deploy:workers
 ```
 
-The Worker name is `gocuba-travel`. The deployment does not configure a custom domain; attach
+The Worker name is `gocubatravel`. The deployment does not configure a custom domain; attach
 `gocuba.travel` to the Worker in Cloudflare after confirming the account and zone are the intended
 ones.
 

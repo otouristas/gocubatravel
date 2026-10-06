@@ -2,7 +2,7 @@ import { bindings, defineConfig, defineWorker } from "cf/config";
 
 export default defineConfig({
   worker: defineWorker({
-    name: "gocuba-travel",
+        name: "gocubatravel",
     entrypoint: "vinext/server/fetch-handler",
     compatibilityDate: "2026-10-06",
     compatibilityFlags: ["nodejs_compat"],
