@@ -16,7 +16,38 @@ npm run dev
 
 Open `http://localhost:3000` (redirects to `/el`).
 
-## Deploy to Netlify
+## Deploy to Cloudflare Workers
+
+The primary deployment target is Cloudflare Workers through vinext and the Cloudflare CLI.
+`cloudflare.config.ts` defines the Worker and `vite.config.ts` connects the Next.js App Router
+to Cloudflare's Workers runtime. The project intentionally uses no Cloudflare storage bindings:
+all current pages are generated from the bundled content records.
+
+Use Node.js 22.18 or newer.
+
+```bash
+npm install
+npm run dev:workers
+```
+
+Open the local URL printed by Vite. Validate the production-shaped Cloudflare bundle without
+uploading it:
+
+```bash
+npm run build:workers
+```
+
+After authenticating with Cloudflare (`cf auth login`), deploy with:
+
+```bash
+npm run deploy:workers
+```
+
+The Worker name is `gocuba-travel`. The deployment does not configure a custom domain; attach
+`gocuba.travel` to the Worker in Cloudflare after confirming the account and zone are the intended
+ones.
+
+## Deploy to Netlify (legacy)
 
 The site builds with zero configuration on Netlify: `netlify.toml` sets the build command, the
 publish directory, and Node 22. Netlify installs and updates the Next.js runtime itself, so no
