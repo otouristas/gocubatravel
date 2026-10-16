@@ -107,8 +107,7 @@ def load(name: str) -> list:
 def clean(s: str) -> str:
     s = (s or "").replace("\xa0", " ").replace("&nbsp;", " ").replace("&amp;", "&")
     # The old customer-facing address is retired; GoCuba mail goes to hello@gocuba.travel.
-    # Rewritten here so it survives regeneration; the raw exports keep the address they
-    # were extracted with, exactly as they keep their original image URLs.
+    # Kept on regeneration so an older export cannot publish the retired address again.
     s = OLD_EMAIL.sub("hello@gocuba.travel", s)
     s = re.sub(r"\[inlinetweet[^\]]*\]|\[/inlinetweet\]", "", s)
     s = re.sub(r"[ \t]+", " ", s)
