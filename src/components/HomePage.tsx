@@ -50,11 +50,11 @@ const PREP_SESSION_PATH = "/epikoinonia/";
 const DESTINATIONS_HUB_PATH: string | null = null;
 
 /**
- * Migrated lead-magnet landing page. GoCuba is the redesign skydream.gr
- * redirects to, so this stays an internal route — linking back to the old
- * domain would bounce the visitor through a redirect to get here.
+ * The GoCuba copy of this page does not yet capture an email or deliver the
+ * guide. Until that flow is migrated, the CTA uses the verified landing page
+ * that still runs the lead magnet.
  */
-const FREE_GUIDE_PATH = "/cuba-travel-documents-guide/";
+const FREE_GUIDE_URL = "https://www.skydream.gr/cuba-travel-documents-guide/";
 
 /** Three equal entry points into the funnel — deliberately no "recommended" one. */
 const START_OPTIONS = [
@@ -959,10 +959,10 @@ export default function HomePage({ locale }: { locale: Locale }) {
               </p>
 
               <div className="mt-8">
-                <Link href={localizedPath(locale, FREE_GUIDE_PATH)} className="btn-gold">
+                <a href={FREE_GUIDE_URL} className="btn-gold">
                   <span>{isEn ? "Download the free guide" : "Κατέβασε τον δωρεάν οδηγό"}</span>
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

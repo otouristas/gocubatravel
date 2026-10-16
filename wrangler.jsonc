@@ -11,5 +11,8 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  // Preview-only. `wrangler preview` refuses to run without this block.
+  // Production deploys still use the top-level settings above.
+  "previews": {}
 }
